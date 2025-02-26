@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <link rel="stylesheet" href="indexstyle.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Yaman</title>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet" />
+  <link rel="shortcut icon" type="image/png" href="birthday.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+  <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+
+</head>
+
+<body>
+  <div id="container" style="display:none">
+    <div class="s-2"></div>
+    <div class="card">
+      <div class="sides left-side">
+        <h1 style="font-size: 20px;" class="profession"> Happy Birthday</h3>
+          <!-- <h3 class="name">Your Friends </h3> -->
+      </div>
+      <div class="sides right-side">
+        <!-- <h1 class="profession"> Birthday</h3> -->
+        <h3 class="name">Yaman.</h3>
+      </div>
+      <div class="back-side">
+        <p class="biography">
+          Happy Non-Birthday my love! ♥️
+          Even though we’re miles apart today, I want you to know that my heart is right there with you, celebrating the
+          incredible person you are. I may not be able to be with you in person, but know that every thought, every
+          wish, and every moment is filled with love for you. You make my life brighter, and I’m so lucky to call you
+          mine. Even though we can't share this day in the way we want, we’ll make up for it with all the future
+          birthdays and moments we’ll have together. I hope today brings you as much happiness as you bring to my life.
+          Can’t wait to celebrate with you soon. Wishing you all the love in the world, today and always. I love you the
+          most 💕🥂
+        </p>
+      </div>
+
+      <button class="button" onClick="window.open('wish.html');">
+        A Message For You
+      </button>
+
+    </div>
+    <div class="s-1"></div>
+    <div class="right-col">
+      <img src="images/play.png" id="icon">
+    </div>
+  </div>
+  <span id="count"></span>
+
+  <div class="lording">
+    <h1 style="color: white; margin-top: 40px; text-align: center;">Please wait a minute, I am setting things up to
+      celebrate your birthday.</h1>
+    <div class="center">
+      <div class="ring"></div>
+      <span>loading...</span>
+    </div>
+  </div>
+  <div id="home" class="home-style-2 slider-area" style="display:none">
+
+    <div class="particles-js" id="particles-js"><canvas class="particles-js-canvas-el"
+        style="width: 100%; height: 100%;" width="1366" height="606"></canvas></div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <audio id="hbdmp" autoplay loop>
+
+      <source src="hbd.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+
+    <script>
+      var hbdmp = document.getElementById("hbdmp")
+      var icon = document.getElementById("icon")
+
+      icon.onclick = function () {
+        if (hbdmp.paused) {
+          alert("We have created a violin cover of Perfect for you, Yaman. Please listen and let us know how it is. Happy Birthday!")
+          hbdmp.play();
+          icon.src = "images/pause.png";
+        } else {
+          hbdmp.pause();
+          icon.src = "images/play.png";
+        }
+
+      }
+
+    </script>
+    <script>
+
+      setTimeout(function () {
+        $('.lording').hide()
+      }, 5000);
+
+      setTimeout(function () {
+        $('#container').show()
+      }, 5199);
+
+
+    </script>
+
+</body>
+
+</html>
